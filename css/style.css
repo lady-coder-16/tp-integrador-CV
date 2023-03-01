@@ -157,6 +157,13 @@ img{
 }
 
 /* --------------------*/
+[type="checkbox"]:checked{
+    border-color: var(--color-light);
+    accent-color: #ffa6008f;
+    ;
+}
+/* --------------------*/
+
 .section{
     padding: 1.5rem 0;
 }
