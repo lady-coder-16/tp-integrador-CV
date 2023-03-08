@@ -8,11 +8,12 @@
     --title-color: #0B0A0A;
     --text-color: #403A3A;
     --text-color-light: #707070;
+    --text-highlighted:#ffe303;
     --container-color: #FAFAFA;
     --container-color-alt: #F0EFEF;
     --body-color: #FCFCFC;
 
-    --color-light: #DB8852;
+    --text-color-theme: #e78f54;
     --color-dark: #B7CCC9;
 
     /* ----- Tipografia -----*/
@@ -47,7 +48,7 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
 }
- /*added*/
+ /* -------------------- Header y Navlist ----------------*/
  .logo{
     color: var(--text-color);
     font-size: 35px;
@@ -56,7 +57,7 @@ html{
 }
 
  .span-color{
-    color: var(--color-light);
+    color: var(--text-color-theme);
 }
 
 .navlist{
@@ -75,11 +76,11 @@ html{
 }
 
 .navlist a:hover{
-    color: var(--color-light);
+    color: var(--text-color-theme);
 }
 
 .navlist a.active{
-    color: var(--color-light);
+    color: var(--text-color-theme);
 }
 
 #menu-icon{
@@ -90,7 +91,6 @@ html{
     margin-left: 25px;
     display: none;
 }
-
 
 header{
     position: fixed;
@@ -119,13 +119,51 @@ header.sticky{
     transition: .1s;
 }
 
-/*end added*/
+/*-------------------------------------*/
+/* ---------- MODO NOCHE --------------*/
 
+#boton-modo-noche{
+    border: 2px solid var(--text-color);
+    color: var(--title-color);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    transition: .3s;
+}
+
+#boton-modo-noche:hover{
+    color: var(--text-color-theme);
+    border: 2px solid var(--text-color-theme);
+    transition: .3s;
+    cursor: pointer;
+
+   }
+
+
+/********** Estructura del Modo Noche *********/
+body.dark-theme{
+    /*--title-color: #F2F2F2;
+    --text-color:#BFBFBF;
+    --text-color-theme: #1C82AD;
+    --container-color:#212121;
+    --container-color-alt:#181616;
+    --body-color:#2B2B2B;*/
+
+    --title-color: #F2F2F2;
+    --text-color:#BFBFBF;
+    --text-color-theme: #910aa3d3;
+    --text-highlighted:#b581fe;
+    --container-color:#433549dc;
+    --container-color-alt:#2B2B2B;
+    --body-color:#2e1f35dc;
+}
+
+
+/*-----------------------------------------------------------------*/
 /* ----- Clases modificadas para que se ajuste a una hoja A4 -----*/
 body{
     margin: 0 0 var(--header-height) 0;
-    /*padding: 0;*/
-    padding: 120px 15% 120px;
+    padding: 0;
+    /*padding: 120px 15% 120px;*/
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
@@ -144,7 +182,6 @@ h1,h2,h3{
 ul{
     padding: 0;
     list-style: none;
-
 }
 
 a{
@@ -156,13 +193,12 @@ img{
     height: auto;
 }
 
-/* --------------------*/
+/* -------- CAMBIO DE DISEÑO DE LOS CHECKBOXES ------------*/
 [type="checkbox"]:checked{
-    border-color: var(--color-light);
-    accent-color: #ffa6008f;
-    ;
+    border-color: var(--text-color-theme);
+    accent-color: var(--text-color-theme);
 }
-/* --------------------*/
+/* ---------------------------------------------------------*/
 
 .section{
     padding: 1.5rem 0;
@@ -190,8 +226,9 @@ img{
     gap: 1.5rem;
 }
 
-/* --------------------*/
-/* ----- HOME ----- */
+/* -----------------------------------------------------*/
+/* ______________RESUMEN A LA IZQUIERDA________________*/
+/* --------------------- HOME ------------------------- */
 .home{
     position: relative;
 }
@@ -224,6 +261,7 @@ img{
 
 .home__address{
     gap: 1rem;
+    justify-self: center;
 }
 
 .home__information{
@@ -248,18 +286,18 @@ img{
     margin-top: var(--mb-3);
 }
 
-.home__button-movil:hover{
-    background-color: var(--color-light);
-    color: var(--container-color);
+.home__button-movil:hover, .boton-modo-noche:hover{
+    background-color: var(--text-color-theme);
+    color: var(--text-color);
 }
 
-/* ----- SOBRE MI - PERFIL ----- */
+/* ------------ SOBRE MI - PERFIL ------------ */
 .profile__description{
     text-align: center;
 }
 
 
-/* ----- SOCIAL - CONTACTO ----- */
+/* ------------ SOCIAL - CONTACTO ------------ */
 
 .social__container{
     grid-template-columns: max-content;
@@ -282,7 +320,10 @@ img{
     margin-right: .25rem;
 }
 
-/* -----  EDUCACION ----- */
+
+/* -----------------------------------------------------*/
+/* ______________RESUMEN A LA DERECHA________________*/
+/* ----------------  EDUCACION ------------------- */
 .education__content{
     display:flex;
 }
@@ -296,7 +337,7 @@ img{
     display: block;
     width: 16px;
     height: 16px;
-    background-color: var(--color-light);
+    background-color: var(--text-color-theme);
     border-radius:50%;
     margin-top: .25rem;
 }
@@ -305,7 +346,7 @@ img{
     display: block;
     width: 2px;
     height: 110%;
-    background-color: var(--color-light);
+    background-color: var(--text-color-theme);
     transform: translate(7px, 0);
 }
 
@@ -326,7 +367,7 @@ img{
     font-size: var(--smaller-font-size);
 }
 
-/* -----  HABILIDADES ----- */
+/* ------------  HABILIDADES ------------ */
 .skills__content, .languages__content{
     grid-template-columns: repeat(2, 1fr);
 }
@@ -341,7 +382,7 @@ img{
     margin-bottom: var(--mb-3);
 }
 
-.skills__circle, .languages__circle{
+.languages__circle{
     display: inline-block;
     width: 5px;
     height: 5px;
@@ -350,7 +391,7 @@ img{
     margin-right: .75rem;
 }
 
-/* -----  INTERESES ----- */
+/* ------------  INTERESES ------------ */
 .interests__container{
     grid-template-columns: repeat(2,1fr);
     margin-top: var(--mb-2);
@@ -367,3 +408,95 @@ img{
     color: var(--text-color-light);
     margin-bottom: .25rem;
 }
+/* ----------------------------------------------*/
+/*--------------- MEDIA QUERIES ----------------*/
+/*Para resoluciones pequeñas*/
+@media screen and (max-width: 320px){
+
+    .skills__content, .languages__content, .interests__container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem .5rem;
+    }
+}
+
+@media (max-width: 968px){
+
+    body{
+        padding-top: 30%;
+        
+    }
+
+    #menu-icon{
+        display:block;
+    }
+    .navlist{
+        position: absolute;
+        top: -1000%;
+        right: 0;
+        left: 0;
+        display: block;
+        flex-direction: column;
+        padding: 0;
+        background-color: var(--body-color);
+        box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    }
+
+    .navlist li{
+        position: relative;
+        top: 0%;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1.5rem;
+        background-color: var(--body-color);
+        box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    }
+    
+    .navlist.open{
+        top: 100%;
+        transition: 0.3s;
+    }
+    
+
+   #boton-modo-noche{
+    border: 2px solid var(--text-color);
+    color: var(--title-color);
+    width: fit-content;
+    }
+
+}
+
+/*Para resoluciones grandes*/
+@media screen and (min-width: 968px){
+    body{
+        margin: 3rem 0;
+        padding-top: 10%;
+    }
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .resumen{
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        background-color: var(--container-color);
+        box-shadow: 0 0 8px rgba(13,12,12,.15);
+    }
+    .resumen_izq, .resumen_der{
+        padding: 0 1.5rem;
+    }
+    .resumen_izq{
+        padding: 1rem 1.5rem;
+        background-color: var(--text-color-theme);
+        box-shadow: 0 0 8px rgba(13,12,12,.15); /*-container-color-alt*/
+    }
+    
+    .resumen_der{
+        padding: 1rem 2rem 1rem 4rem;
+    }
+
+    .skills__content, .languages__content{
+        justify-self: center;
+        padding-left: 10%;
+    }
+}
+

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Trabajo Integrador</title>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
     
     <!--Vinculo a Archivo css-->
     <link rel='stylesheet' type="text/css" href='css/style.css'>
@@ -28,8 +29,7 @@
 </head>
 <body>
     <!--Diseño del header-->
-    <header>
-        
+    <header> 
         <a href="#" class="logo">/Cod<span class="span-color">e</span>r.</span></a>
         <ul class="navlist">
             <li><a href="#home" class="active">Home</a></li>
@@ -37,12 +37,14 @@
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#intereses">Intereses</a></li>
             <li><a href="#contact">Contacto</a></li>
+
+            <!-- ----- Cambio a Modo Noche ------------>
+            <li><i class='bx bx-moon change-theme' title="Modo Noche" id="boton-modo-noche"></i></li>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon">
 
         </div>
-        
     </header>
 
     <main class="l-main bd-container">
@@ -66,7 +68,7 @@
 
                         <div class="home__address bd-grid">
                             <span class="home__information">
-                                <i class="bx bx-map"></i>Temperley - Buenos Aires, Argentina
+                                <i class="bx bx-map"></i>Buenos Aires, Argentina
                             </span>
                         </div>
                     </div>
@@ -76,7 +78,7 @@
                 <section class="sobre_mi section" id="sobre_mi">
                     <h2 class="section-title">SOBRE MI</h2>
 
-                    <p class="profile__description">Soy una desarrolladora entusiasta, que busca ampliar sus conocimientos y adquirir nuevas experiencias enriquecedoras.<br>Apasionada de la programacion, que busca mejorarse dia a dia <br> Siempre interesada en las nuevas tecnologías, y con gran interés en proporcionar al usuario una agradable experiencia.</p>
+                    <p class="profile__description">Soy una desarrolladora entusiasta, que busca ampliar sus conocimientos y adquirir nuevas experiencias enriquecedoras.<br><br>Apasionada de la programacion, que busca mejorarse dia a dia <br><br>Siempre interesada en las nuevas tecnologías, y con gran interés en proporcionar al usuario una agradable experiencia.</p>
                 </section>
 
                 <!-- ----------- SOCIAL - CONTACTO----------->
@@ -100,7 +102,7 @@
 
 
             </div>
-            <div class="resumen_der">
+            <div class="resumen_der" id="resumen-derecha">
                 <!-- ----------- EDUCACION ----------->
                 <section class="education section" id="education">
                     <h2 class="section-title">Educación</h2>
@@ -129,6 +131,7 @@
                                 <span class="education__place">Universidad Nacional de Lanús (UNLa)</span>
                                 <span class="education__year">2019 - Actualidad</span>
                             </div>
+                           
                         </div>
                     </div>
                 </section>
