@@ -466,6 +466,9 @@ img{
 
 /*Para resoluciones grandes*/
 @media screen and (min-width: 968px){
+    .home__button-movil:hover{
+        background-color: var(--container-color-alt);
+    }
     body{
         margin: 3rem 0;
         padding-top: 10%;
