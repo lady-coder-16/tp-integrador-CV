@@ -39,4 +39,5 @@ El proyecto esta subido a GitHub Pages, donde puede visualizarse [aquí](https:/
 - Se usó la libreria de [Google Fonts](https://fonts.google.com/) para el uso de Fuentes.
 - Se usó [Boxicons](https://boxicons.com/) para la utilizacion de iconos.
 - Se usó [RandomUser](https://randomuser.me/) para el Implementacion de la foto de Perfil.
+- Es aconsejable iniciar sesion, antes de utilizar los enlaces externos, tanto en LinkedIn y GitHub.
 
